@@ -1,0 +1,228 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="STM32UI.MainWindow"
+        Width="1200" Height="700"
+        Title="STM32 Sensor Dashboard">
+
+    <Grid RowDefinitions="Auto,*" Margin="24">
+
+        <TextBlock Text="STM32 SENSOR DASHBOARD"
+                   FontSize="34"
+                   FontWeight="Bold"
+                   HorizontalAlignment="Center"
+                   Margin="0,0,0,20"/>
+
+        <Grid Grid.Row="1"
+              ColumnDefinitions="*,*,*"
+              ColumnSpacing="20">
+
+            <!-- BMP180 CARD -->
+            <Border Grid.Column="0"
+                    CornerRadius="18"
+                    Padding="20"
+                    Background="#1E1E1E"
+                    BorderBrush="#404040"
+                    BorderThickness="1">
+
+                <StackPanel Spacing="14">
+
+                    <TextBlock Text="SENSOR 1"
+                               FontSize="16"
+                               FontWeight="SemiBold"
+                               Foreground="LightGray"/>
+
+                    <TextBlock Text="BMP180"
+                               FontSize="28"
+                               FontWeight="Bold"/>
+
+                    <Separator Margin="0,4,0,8"/>
+
+                    <TextBlock Text="Temperature"
+                               FontSize="18"
+                               FontWeight="SemiBold"/>
+                    <TextBlock Name="BmpTempValueText"
+                               Text="-"
+                               FontSize="24"
+                               FontWeight="Bold"/>
+                    <TextBlock Name="BmpTempStateText"
+                               Text=""
+                               FontSize="18"
+                               FontWeight="Bold"/>
+
+                    <TextBlock Text="Pressure"
+                               FontSize="18"
+                               FontWeight="SemiBold"
+                               Margin="0,8,0,0"/>
+                    <TextBlock Name="BmpPressureValueText"
+                               Text="-"
+                               FontSize="24"
+                               FontWeight="Bold"/>
+                    <TextBlock Name="BmpPressureStateText"
+                               Text=""
+                               FontSize="18"
+                               FontWeight="Bold"/>
+
+                    <TextBlock Text="Altitude"
+                               FontSize="18"
+                               FontWeight="SemiBold"
+                               Margin="0,8,0,0"/>
+                    <TextBlock Name="BmpAltitudeValueText"
+                               Text="-"
+                               FontSize="24"
+                               FontWeight="Bold"/>
+
+                    <Button Name="BmpUseSensorButton"
+                            Content="Use Sensor"
+                            Height="42"
+                            Margin="0,16,0,0"
+                            Click="BmpUseSensorButton_Click"/>
+                </StackPanel>
+            </Border>
+
+            <!-- TSL2591 CARD -->
+            <Border Grid.Column="1"
+                    CornerRadius="18"
+                    Padding="20"
+                    Background="#1E1E1E"
+                    BorderBrush="#404040"
+                    BorderThickness="1">
+
+                <StackPanel Spacing="14">
+
+                    <TextBlock Text="SENSOR 2"
+                               FontSize="16"
+                               FontWeight="SemiBold"
+                               Foreground="LightGray"/>
+
+                    <TextBlock Text="TSL2591"
+                               FontSize="28"
+                               FontWeight="Bold"/>
+
+                    <Separator Margin="0,4,0,8"/>
+
+                    <TextBlock Text="Channel 0"
+                               FontSize="18"
+                               FontWeight="SemiBold"/>
+                    <TextBlock Name="TslCh0ValueText"
+                               Text="-"
+                               FontSize="24"
+                               FontWeight="Bold"/>
+
+                    <TextBlock Text="Channel 1"
+                               FontSize="18"
+                               FontWeight="SemiBold"
+                               Margin="0,8,0,0"/>
+                    <TextBlock Name="TslCh1ValueText"
+                               Text="-"
+                               FontSize="24"
+                               FontWeight="Bold"/>
+
+                    <TextBlock Text="Light Level"
+                               FontSize="18"
+                               FontWeight="SemiBold"
+                               Margin="0,8,0,0"/>
+
+                    <ProgressBar Name="LightLevelBar"
+                                 Minimum="0"
+                                 Maximum="100"
+                                 Value="0"
+                                 Height="22"/>
+
+                    <TextBlock Name="LightLevelText"
+                               Text="0 %"
+                               FontSize="20"
+                               FontWeight="Bold"
+                               HorizontalAlignment="Center"/>
+
+                    <Button Name="TslUseSensorButton"
+                            Content="Use Sensor"
+                            Height="42"
+                            Margin="0,16,0,0"
+                            Click="TslUseSensorButton_Click"/>
+                </StackPanel>
+            </Border>
+
+            <!-- HC-SR04 CARD -->
+            <Border Grid.Column="2"
+                    CornerRadius="18"
+                    Padding="20"
+                    Background="#1E1E1E"
+                    BorderBrush="#404040"
+                    BorderThickness="1">
+
+                <StackPanel Spacing="14">
+
+                    <TextBlock Text="SENSOR 3"
+                               FontSize="16"
+                               FontWeight="SemiBold"
+                               Foreground="LightGray"/>
+
+                    <TextBlock Text="HC-SR04"
+                               FontSize="28"
+                               FontWeight="Bold"/>
+
+                    <Separator Margin="0,4,0,8"/>
+
+                    <TextBlock Text="Distance"
+                               FontSize="18"
+                               FontWeight="SemiBold"/>
+                    <TextBlock Name="HcsrDistanceValueText"
+                               Text="-"
+                               FontSize="28"
+                               FontWeight="Bold"/>
+
+                    <TextBlock Text="Zone"
+                               FontSize="18"
+                               FontWeight="SemiBold"
+                               Margin="0,8,0,0"/>
+                    <TextBlock Name="HcsrZoneText"
+                               Text="-"
+                               FontSize="22"
+                               FontWeight="Bold"/>
+
+                    <TextBlock Text="LED Status"
+                               FontSize="18"
+                               FontWeight="SemiBold"
+                               Margin="0,12,0,0"/>
+
+                    <StackPanel Orientation="Horizontal"
+                                Spacing="18"
+                                HorizontalAlignment="Center"
+                                Margin="0,8,0,0">
+
+                        <Border Name="RedIndicator"
+                                Width="36"
+                                Height="36"
+                                CornerRadius="18"
+                                Background="#3A1A1A"
+                                BorderBrush="Gray"
+                                BorderThickness="1"/>
+
+                        <Border Name="YellowIndicator"
+                                Width="36"
+                                Height="36"
+                                CornerRadius="18"
+                                Background="#3A3612"
+                                BorderBrush="Gray"
+                                BorderThickness="1"/>
+
+                        <Border Name="GreenIndicator"
+                                Width="36"
+                                Height="36"
+                                CornerRadius="18"
+                                Background="#16351C"
+                                BorderBrush="Gray"
+                                BorderThickness="1"/>
+                    </StackPanel>
+
+                    <Button Name="HcsrUseSensorButton"
+                            Content="Use Sensor"
+                            Height="42"
+                            Margin="0,16,0,0"
+                            Click="HcsrUseSensorButton_Click"/>
+                </StackPanel>
+            </Border>
+
+        </Grid>
+    </Grid>
+</Window>
