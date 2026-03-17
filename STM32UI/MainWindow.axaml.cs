@@ -272,14 +272,6 @@ public partial class MainWindow : Window
     {
         SendCommand("BMP");
     }
-
-    private void TslUseSensorButton_Click(object? sender, RoutedEventArgs e)
-    {
-        SendCommand("TSL");
-    }
-
-    private void HcsrUseSensorButton_Click(object? sender, RoutedEventArgs e)
-    {
-        SendCommand("HCSR04");
-    }
+    
+    
 }

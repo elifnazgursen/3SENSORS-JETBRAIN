@@ -72,9 +72,11 @@
                                FontWeight="Bold"/>
 
                     <Button Name="BmpUseSensorButton"
-                            Content="Use Sensor"
-                            Height="42"
-                            Margin="0,16,0,0"
+                            Content="GET DATA"
+                            FontSize="18"
+                            FontWeight="SemiBold"
+                            Height="40"
+                            Margin="0,40,0,0"
                             Click="BmpUseSensorButton_Click"/>
                 </StackPanel>
             </Border>
@@ -134,11 +136,7 @@
                                FontWeight="Bold"
                                HorizontalAlignment="Center"/>
 
-                    <Button Name="TslUseSensorButton"
-                            Content="Use Sensor"
-                            Height="42"
-                            Margin="0,16,0,0"
-                            Click="TslUseSensorButton_Click"/>
+                   
                 </StackPanel>
             </Border>
 
@@ -215,11 +213,7 @@
                                 BorderThickness="1"/>
                     </StackPanel>
 
-                    <Button Name="HcsrUseSensorButton"
-                            Content="Use Sensor"
-                            Height="42"
-                            Margin="0,16,0,0"
-                            Click="HcsrUseSensorButton_Click"/>
+                    
                 </StackPanel>
             </Border>
 

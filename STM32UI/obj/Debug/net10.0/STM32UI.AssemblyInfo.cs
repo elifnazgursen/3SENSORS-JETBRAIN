@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("STM32UI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b9a6ecdc5ed47eafe488305f05e08b505bd1c1ec")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3d3f0105f5d60732bd66e98f699dcc23dd22b149")]
 [assembly: System.Reflection.AssemblyProductAttribute("STM32UI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("STM32UI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
